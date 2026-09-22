@@ -4,9 +4,15 @@ import json
 import os
 import shlex
 import subprocess
+from pathlib import Path
 from typing import Protocol
 
 from skillroute.models import RouteCandidate, to_jsonable
+
+# Fleet default (LeTrain): when SKILLROUTE_RERANKER_CMD is unset and the
+# shared Jev re-ranker is installed, use it. Set the env var to empty ("")
+# to force the heuristic reranker (hermetic tests / offline runs).
+FLEET_RERANKER = str(Path.home() / ".hermes/shared/scripts/jev-skill-reranker.py")
 
 
 class Reranker(Protocol):
@@ -15,6 +21,8 @@ class Reranker(Protocol):
 
 
 class HeuristicReranker:
+    name = "heuristic"
+
     def rerank(self, request: str, candidates: list[RouteCandidate]) -> list[RouteCandidate]:
         return sorted(candidates, key=lambda candidate: candidate.confidence, reverse=True)
 
@@ -29,6 +37,10 @@ class ExternalCommandReranker:
 
     def __init__(self, command: str) -> None:
         self.command = command
+
+    @property
+    def name(self) -> str:
+        return "jev" if "jev-skill-reranker" in self.command else "external"
 
     def rerank(self, request: str, candidates: list[RouteCandidate]) -> list[RouteCandidate]:
         argv = shlex.split(self.command)
@@ -61,8 +73,12 @@ class ExternalCommandReranker:
 
 
 def default_reranker() -> Reranker:
-    command = os.environ.get("SKILLROUTE_RERANKER_CMD")
-    if command:
-        return ExternalCommandReranker(command)
+    if "SKILLROUTE_RERANKER_CMD" in os.environ:
+        command = os.environ["SKILLROUTE_RERANKER_CMD"]
+        if command:
+            return ExternalCommandReranker(command)
+        return HeuristicReranker()  # explicitly disabled (empty value)
+    if os.path.isfile(FLEET_RERANKER):
+        return ExternalCommandReranker(f"python3 {shlex.quote(FLEET_RERANKER)}")
     return HeuristicReranker()
 

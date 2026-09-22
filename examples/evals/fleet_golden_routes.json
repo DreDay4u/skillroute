@@ -1,0 +1,315 @@
+[
+ {
+  "name": "t594",
+  "request": "where is the profile for Arlo?",
+  "expected_skill_names": [
+   "hermes-specialized-profile"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t595",
+  "request": "docker network subnet pool exhausted firewall drops inter-container traffic fix",
+  "expected_skill_names": [
+   "container-network-diagnostics"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t596",
+  "request": "Read /home/andre/infra/coolify-migration/zcode-p6/HANDOFF.md and execute it fully, in order, tasks 1-5. You are authorized for the docker restart in task 3. Report goes to REPORT.md in this directory.",
+  "expected_skill_names": [
+   "executing-plans"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t603",
+  "request": "can i change the display names of the project folders to match the profile",
+  "expected_skill_names": [
+   "vps-organization"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t605",
+  "request": "analyze the hermes gateway down issue",
+  "expected_skill_names": [
+   "hermes-gateway-incident-response"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t610",
+  "request": "Read /home/andre/infra/ocr-fixbatch/HANDOFF2.md and execute it fully: 6 HIGH fixes in /opt/letrain/port-governance, TDD red->green, LAW 6 gates (pytest 150 expected, portctl validate, py_compile), HARD SCOPE repo files only, no commit/push. Write FIXREPORT2.md in /home/andre/infra/ocr-fixbatch/.",
+  "expected_skill_names": [
+   "executing-plans"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t616",
+  "request": "Audit local site repos for stale branches, worktrees, uncommitted debris, orphaned supabase databases",
+  "expected_skill_names": [
+   "repository-hygiene-enforcement"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t617",
+  "request": "Audit GBrain and profile MEMORY.md files for stale claims against live VPS state",
+  "expected_skill_names": [
+   "memory-content-audit"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t618",
+  "request": "daily dream cycle for agent memory and skills from Dream-RSI paper replay simulator",
+  "expected_skill_names": [
+   "knowledge-compounding"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t620",
+  "request": "plugins install mattpocock-skills\nnpx skills@latest add mattpocock/skills",
+  "expected_skill_names": [
+   "repo-distributed-tool-installation",
+   "skills-library-management"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t621",
+  "request": "give me a step by step process to run a compound relay.",
+  "expected_skill_names": [
+   "compound-relay-ops"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t624",
+  "request": "Install the TypeSafe skill. If you're in Claude Code, run `claude plugin marketplace add typesafe-ai/skills`, then `claude plugin install typesafe@typesafe-ai`. If you're in another agent, run `npx skills add typesafe-ai/skills --skill typesafe-ai` and select your agent. Use one installation method. You can read the skill directly at https://github.com/typesafe-ai/skills/blob/main/skills/typesafe-ai/SKILL.md (raw: https://raw.githubusercontent.com/typesafe-ai/skills/main/skills/typesafe-ai/SKILL.md). Then use the TypeSafe skill when working on this project.",
+  "expected_skill_names": [
+   "add-skill-to-library"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t627",
+  "request": "https://docs.typesafe.ai/introduction\nyou need to use your best case tools to scrape and learn these docs.  i just got access to thi Jev model and API keys and i need us to learn it for our system,  but we need full knowledge first .  and let Arlo know the new stuff after thee research and Dev.",
+  "expected_skill_names": [
+   "typesafe-ai"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t633",
+  "request": "how does it work in our system.  do you need the api key now?",
+  "expected_skill_names": [
+   "typesafe-ai"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t634",
+  "request": "npx skills add typesafe-ai/skills --skill typesafe-ai",
+  "expected_skill_names": [
+   "add-skill-to-library"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t635",
+  "request": "https://docs.typesafe.ai/api.md\nhttps://docs.typesafe.ai/introduction/coding-agents.md\nhttps://docs.typesafe.ai/agent-skill.md\nhttps://docs.typesafe.ai/models.md",
+  "expected_skill_names": [
+   "typesafe-ai"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t636",
+  "request": "i already have a key.  Im unsure how to use it now.  im in the beta access of it.  what should i test in the playground .  give me a hard test prompt to use.\n\nalso here is my API: key is apikey_22057bb6dd40011a41c5b0e443c3c7593161_8952eaded0bf2b06103f65b5c2af91f99ce75592602913e7baec48eae9cc3ad9\n\ninstall it appropriately for the Agents use",
+  "expected_skill_names": [
+   "typesafe-ai"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t650",
+  "request": "how do I use the typesafe api key in the playground",
+  "expected_skill_names": [
+   "typesafe-ai"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t651",
+  "request": "install a new skill into the shared library",
+  "expected_skill_names": [
+   "add-skill-to-library"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t652",
+  "request": "fix the failing cloudflare tunnel route to origin",
+  "expected_skill_names": [
+   "cloudflare-tunnel-management"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t653",
+  "request": "debug a stuck docker container port binding",
+  "expected_skill_names": [
+   "diagnosing-bugs",
+   "service-port-governance"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t657",
+  "request": "Deploy a Next.js app to the VPS behind Cloudflare Tunnel with TLS",
+  "expected_skill_names": [
+   "vps-nextjs-deploy"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t676",
+  "request": "Reply to Andre's message saying thanks for the lunch recommendation",
+  "expected_skill_names": [
+   "gws-gmail-reply"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t687",
+  "request": "Dogfood: write operator README for jev-skill-intake daemon (usage, tuning floors, kill switch, audit log) + sign off on intake skill suggestions\nThe jev-skill-intake daemon is now live (systemd user unit jev-skill-intake.service, script at /home/andre/.hermes/shared/scripts/jev-skill-intake.py, state+audit at /home/andre/.cache/jev-skill-intake/).\n\nTASK (real deliverable): write an operator README and save it to /home/andre/.hermes/shared/scripts/jev-skill-intake.README.md covering:\n- what the daemon does (kanban intake skill suggestions: SkillRoute retrieval -> Jev noul relevance gate -> top-3 advisory comment, author=jev-intake)\n- the anti-spam contract (dual floors route>=0.12 + jev>=0.60, max 3 suggestions, one comment per task, 10",
+  "expected_skill_names": [
+   "delivering-content-to-user"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t689",
+  "request": "Dogfood: write operator README for jev-skill-intake daemon (usage, tuning floors, kill switch, audit log) + sign off on intake skill suggestions\nThe jev-skill-intake daemon is now live (systemd user unit jev-skill-intake.service, script at /home/andre/.hermes/shared/scripts/jev-skill-intake.py, state+audit at /home/andre/.cache/jev-skill-intake/).\nTASK (real deliverable): write an operator README and save it to /home/andre/.hermes/shared/scripts/jev-skill-intake.README.md covering: what the daemon does (kanban intake skill suggestions), the anti-spam contract, operations (systemctl, --seed, --once, --selftest, --task modes), kill switch, tuning env vars, audit trail.",
+  "expected_skill_names": [
+   "delivering-content-to-user"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t697",
+  "request": "[E2E routing test 2] JEVFD-TEST research and compare three flat-fee email API pr\nRouted by Jev front door (agent-mail-forge script hook).\n\n- From: forge\n- Original recipient: forge\n- Priority field: normal\n- Jev agent choice: oracle (confidence 0.97)\n- Jev urgency: 1.0\n\n## Original message\n\n[E2E routing test 2] JEVFD-TEST research and compare three flat-fee email API providers for the client portal, pick one and reply with the tradeoffs\n",
+  "expected_skill_names": [
+   "public-apis"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t701",
+  "request": "[E2E routing test 2] JEVFD-TEST research and compare three flat-fee email API providers for transactional sends",
+  "expected_skill_names": [
+   "public-apis"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t715",
+  "request": "[E2E routing regression] JEVFD-TEST research the top three flat-fee AI coding AP\nRouted by Jev front door (agent-mail-forge script hook).\n\n- From: forge\n- Original recipient: forge\n- Priority field: normal\n- Jev agent choice: researcher-arlo (confidence 0.99)\n- Jev urgency: 1.78\n\n## Original message\n\n[E2E routing regression] JEVFD-TEST research the top three flat-fee AI coding API plans this week and summarize pricing tradeoffs \u2014 post-alias-fix probe t_f3284fcb\n",
+  "expected_skill_names": [
+   "zai-coding-plan"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t765",
+  "request": "JEV-first decision mandate \u2014 LAW 7 + fleet policy + gate hooks\nGoal: hard-code JEV (TypeSafe System One typed judgments) into all fleet decision making per Andre 2026-09-22. Plan: (1) LAW 7 in ~/.hermes/shared/hooks/law.md (auto-injected every session); (2) \u00a711 in /home/andre/AGENTS.md contract; (3) pointer blocks in ~/.zcode/AGENTS.md, ~/.claude/CLAUDE.md, ~/.codex/AGENTS.md, ~/.hermes/AGENTS.md; (4) typesafe-ai skill mandate note; (5) jev-gate-hook wrapper in shared hooks; (6) wire PreToolUse Bash matcher into ZCode + Claude Code configs (fail-open, kill-switch file). Verify with hook smoke tests, JSON validation, greps.",
+  "expected_skill_names": [
+   "typesafe-ai"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t768",
+  "request": "Deploy the Next.js monorepo app to the VPS behind Cloudflare Tunnel with TLS",
+  "expected_skill_names": [
+   "vps-nextjs-deploy"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t769",
+  "request": "Investigate and fix the memory leak in the EulogyWalker background worker container",
+  "expected_skill_names": [
+   "ew-build",
+   "diagnosing-bugs"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t770",
+  "request": "Add Uptime Kuma heartbeat monitoring for the jev-skill-intake daemon",
+  "expected_skill_names": [
+   "managing-kuma-monitors"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t771",
+  "request": "Add Uptime Kuma heartbeat monitoring for the jev-skill-intake daemon\nThe daemon (new systemd user unit, script /home/andre/.hermes/shared/scripts/jev-skill-intake.py) has no monitoring. Add a push-type monitor: a systemd timer touching a heartbeat file, mirror how gh-runner-heartbeat.service works. Do not reconfigure Kuma itself.",
+  "expected_skill_names": [
+   "managing-kuma-monitors"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t777",
+  "request": "install a new skill into the shared fleet skills library",
+  "expected_skill_names": [
+   "add-skill-to-library"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t778",
+  "request": "evaluate typed judgments in the typesafe playground",
+  "expected_skill_names": [
+   "typesafe-ai"
+  ],
+  "expect_clarification": null
+ },
+ {
+  "name": "t776",
+  "request": "Happy birthday message draft for my brother, something short and warm",
+  "expected_skill_names": [],
+  "expect_clarification": true
+ },
+ {
+  "name": "t775",
+  "request": "Rename the recurring team meeting to Weekly Sync and move it 15 minutes later",
+  "expected_skill_names": [],
+  "expect_clarification": true
+ },
+ {
+  "name": "t774",
+  "request": "Call the dentist Tuesday morning to reschedule my cleaning appointment",
+  "expected_skill_names": [],
+  "expect_clarification": true
+ },
+ {
+  "name": "t773",
+  "request": "Weekly reminder: water the office plants and wipe the counters",
+  "expected_skill_names": [],
+  "expect_clarification": true
+ },
+ {
+  "name": "t772",
+  "request": "Pick up milk and dry cleaning on the way home this evening",
+  "expected_skill_names": [],
+  "expect_clarification": true
+ }
+]

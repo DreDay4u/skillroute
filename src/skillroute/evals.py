@@ -46,12 +46,20 @@ def run_golden_routes(router: Router, cases_path: Path) -> list[EvalResult]:
                 rank_pass = False
                 notes.append(f"missing expected skill id: {expected_id}")
 
-        expected_clarification = bool(case.get("expect_clarification", False))
-        clarification_pass = response.clarification_needed is expected_clarification
-        if not clarification_pass:
-            notes.append(
-                f"clarification expected {expected_clarification}, got {response.clarification_needed}"
-            )
+        raw_clarification = case.get("expect_clarification", False)
+        if raw_clarification is None:
+            # Explicit null: caller measures recall only; don't assert the
+            # confidence-derived clarification flag (the reranker reorders
+            # candidates but does not rewrite their confidence fields).
+            clarification_pass = True
+            expected_clarification = None
+        else:
+            expected_clarification = bool(raw_clarification)
+            clarification_pass = response.clarification_needed is expected_clarification
+            if not clarification_pass:
+                notes.append(
+                    f"clarification expected {expected_clarification}, got {response.clarification_needed}"
+                )
 
         results.append(
             EvalResult(

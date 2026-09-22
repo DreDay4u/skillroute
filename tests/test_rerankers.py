@@ -85,6 +85,25 @@ def test_default_reranker_selects_external_when_env_set(monkeypatch) -> None:
     assert isinstance(default_reranker(), ExternalCommandReranker)
 
 
-def test_default_reranker_is_heuristic_without_env(monkeypatch) -> None:
+def test_default_reranker_is_heuristic_without_env(monkeypatch, tmp_path) -> None:
     monkeypatch.delenv("SKILLROUTE_RERANKER_CMD", raising=False)
+    monkeypatch.setattr("skillroute.rerankers.FLEET_RERANKER", str(tmp_path / "absent.py"))
     assert isinstance(default_reranker(), HeuristicReranker)
+
+
+def test_default_reranker_empty_env_disables_fleet_default(monkeypatch, tmp_path) -> None:
+    monkeypatch.setenv("SKILLROUTE_RERANKER_CMD", "")
+    monkeypatch.setattr("skillroute.rerankers.FLEET_RERANKER", str(tmp_path / "present.py"))
+    (tmp_path / "present.py").write_text("#!/bin/sh\n")
+    assert isinstance(default_reranker(), HeuristicReranker)
+
+
+def test_default_reranker_uses_fleet_default_when_installed(monkeypatch, tmp_path) -> None:
+    monkeypatch.delenv("SKILLROUTE_RERANKER_CMD", raising=False)
+    fleet = tmp_path / "jev-skill-reranker.py"
+    fleet.write_text("#!/bin/sh\n")
+    monkeypatch.setattr("skillroute.rerankers.FLEET_RERANKER", str(fleet))
+    reranker = default_reranker()
+    assert isinstance(reranker, ExternalCommandReranker)
+    assert reranker.name == "jev"
+    assert str(fleet) in reranker.command

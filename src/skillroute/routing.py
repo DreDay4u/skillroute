@@ -131,6 +131,7 @@ class Router:
                     "repo": str(repo_path) if repo_path else None,
                     "limit": limit,
                     "backend": self.backend.name,
+                    "reranker": getattr(self.reranker, "name", type(self.reranker).__name__),
                 },
                 response,
                 attribution=attribution,
